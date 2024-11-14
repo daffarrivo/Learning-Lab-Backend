@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90vw;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f5d3b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="datetime-local"] {
+    background-color: #2a2a3d;
+    border: 1px solid #3f3f5e;
+    color: #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus {
+    border-color: #f5d3b3;
+    outline: none;
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #f5d3b3;
+    color: #121212;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e1bc8d;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #d1a573;
+}
+
+.tasks {
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #2a2a3d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #f5d3b3;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.task strong {
+    color: #f5d3b3;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+span.ongoing {
+    color: #7dcf7f;
+}
+
+span.completed {
+    color: #65b766;
+}
+
+span.past {
+    color: #ff4c4c;
+}
+
+.task-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-actions form {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.task-actions button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #ff4c4c;
+    color: #ffffff;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
+.delete-btn:active {
+    background-color: #cc2929;
+}
+
+.complete-btn {
+    background-color: #7dcf7f;
+    color: #ffffff;
+    border: none;
+}
+
+.complete-btn:hover {
+    background-color: #65b766;
+    transform: scale(1.05);
+}
+
+.complete-btn:active {
+    background-color: #4a964c;
+}
